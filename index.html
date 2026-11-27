@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<meta name="description" content="Jane's Unique Gifts & Designs — a home based mom &amp; pop gift shop in Chilliwack BC. T-shirts, home decor, drinkware, seasonal gifts and digital downloads. Established October 2017." />
+<link rel="icon" href="data:," />
+<title>Jane's Unique Gifts &amp; Designs — Chilliwack BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --black:#000000;
+  --panel:#0d0b09;
+  --panel-2:#141110;
+  --taupe:#A08C76;
+  --taupe-light:#B09A82;
+  --taupe-pale:#C9BBA6;
+  --cream:#F7F1E7;
+  --cream-dim:#D8CDBB;
+  --muted:#A99B87;
+  --line:rgba(176,154,130,.32);
+  --line-soft:rgba(176,154,130,.18);
+  --header-bg:#A08C76;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,[role="button"],select,input,textarea,summary{min-height:2.25rem}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.12;margin:0;color:var(--cream)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,48px)}
+.eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--taupe-light);margin:0 0 14px}
+.section{padding:clamp(56px,8vw,104px) 0}
+.section-head{max-width:720px;margin:0 auto 44px;text-align:center}
+.section-head.left{margin-left:0;text-align:left}
+.section-head h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+.section-head p{color:var(--cream-dim);margin:14px 0 0}
+.hairline{width:64px;height:1px;background:var(--taupe);margin:18px auto 0}
+.section-head.left .hairline{margin-left:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 30px;border:1px solid var(--taupe-light);background:transparent;color:var(--cream);font-family:var(--sans);font-size:.8rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease;min-height:48px}
+.btn:hover{background:var(--taupe);border-color:var(--taupe);color:#0a0806}
+.btn.solid{background:var(--taupe);border-color:var(--taupe);color:#0a0806}
+.btn.solid:hover{background:var(--taupe-light);border-color:var(--taupe-light)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+/* ---------- Header ---------- */
+header.site{position:sticky;top:0;z-index:60;background:var(--header-bg);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.header-in{max-width:1400px;margin:0 auto;padding:10px clamp(16px,3vw,40px);display:flex;align-items:center;gap:20px}
+.logo-link{display:flex;align-items:center;flex:0 1 auto;min-width:0;overflow:hidden;text-decoration:none}
+.logo-link img{height:84px;width:auto;max-width:min(320px,42vw);object-fit:contain;object-position:left center}
+.header-actions{display:flex;align-items:center;gap:4px;margin-left:6px;flex:0 0 auto}
+.main-nav{display:flex;gap:6px;margin-left:auto;align-items:center}
+.main-nav a{color:#fff;text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:10px 13px;position:relative;white-space:nowrap}
+.main-nav a::after{content:"";position:absolute;left:13px;right:13px;bottom:4px;height:1px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.main-nav a:hover::after,.main-nav a.active::after{transform:scaleX(1)}
+.header-actions{display:flex;align-items:center;gap:4px;margin-left:6px}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:0;background:transparent;color:#fff;cursor:pointer;text-decoration:none;position:relative;border-radius:50%;transition:background .25s ease}
+.icon-btn:hover{background:rgba(0,0,0,.16)}
+.icon-btn svg{width:20px;height:20px;fill:currentColor}
+.cart-count{position:absolute;top:2px;right:0;min-width:19px;height:19px;padding:0 4px;border-radius:10px;background:#000;color:var(--cream);font-size:.66rem;font-weight:600;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.burger{display:none}
+.mobile-menu{display:none;background:var(--header-bg);border-top:1px solid rgba(0,0,0,.18);padding:8px clamp(16px,3vw,40px) 18px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;color:#fff;text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.18)}
+.mobile-menu a:last-child{border-bottom:0}
+@media(max-width:900px){
+  .main-nav{display:none}
+  .burger{display:inline-flex}
+  .logo-link img{height:60px}
+}
+/* ---------- Hero ---------- */
+.hero{border-bottom:1px solid var(--line-soft)}
+.hero-in{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,5vw,72px);align-items:center;padding-top:clamp(44px,6vw,84px);padding-bottom:clamp(44px,6vw,84px)}
+.hero-copy .welcome{font-size:clamp(2.7rem,6vw,4.6rem);letter-spacing:.01em}
+.hero-copy .welcome em{font-style:italic;color:var(--taupe-pale)}
+.hero-copy p.lede{font-size:1.08rem;color:var(--cream-dim);max-width:34rem;margin:22px 0 0}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero-photo{position:relative}
+.hero-photo::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);border:1px solid var(--line);z-index:0}
+.hero-photo img{position:relative;z-index:1;width:100%;height:100%;max-height:560px;object-fit:cover}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase}
+.hero-meta span{display:inline-flex;align-items:center;gap:9px}
+.hero-meta i{width:5px;height:5px;border-radius:50%;background:var(--taupe);display:inline-block}
+@media(max-width:860px){.hero-in{grid-template-columns:1fr}.hero-photo img{max-height:420px}}
+/* ---------- Collections ---------- */
+.coll-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.coll-card{position:relative;display:block;text-decoration:none;overflow:hidden;background:var(--panel);border:1px solid var(--line-soft)}
+.coll-card .ph{aspect-ratio:4/3;overflow:hidden}
+.coll-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.6,.2,1)}
+.coll-card:hover img{transform:scale(1.06)}
+.coll-card .lbl{position:absolute;left:0;right:0;bottom:0;padding:38px 20px 16px;background:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,0));display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.coll-card .lbl h3{font-size:1.45rem}
+.coll-card .lbl span{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-pale);white-space:nowrap;padding-bottom:5px}
+@media(max-width:900px){.coll-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.coll-grid{grid-template-columns:1fr}}
+/* ---------- Product cards ---------- */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:1080px){.prod-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.prod-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+.prod-card{background:var(--panel);border:1px solid var(--line-soft);display:flex;flex-direction:column;text-decoration:none;transition:border-color .3s ease,transform .3s ease}
+.prod-card:hover{border-color:var(--taupe);transform:translateY(-3px)}
+.prod-card .ph{aspect-ratio:1/1;overflow:hidden;background:#fff;position:relative}
+.prod-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.6,.2,1)}
+.prod-card:hover .ph img{transform:scale(1.07)}
+.badge-sale{position:absolute;top:12px;left:12px;z-index:2;background:var(--taupe);color:#0a0806;font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:5px 11px}
+.prod-card .info{padding:16px 16px 18px;display:flex;flex-direction:column;gap:5px;flex:1}
+.prod-card h3{font-size:1.22rem;line-height:1.25}
+.prod-card .cat{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.price{font-family:var(--serif);font-size:1.15rem;color:var(--taupe-pale)}
+.price .was{color:var(--muted);text-decoration:line-through;font-size:.98rem;margin-left:8px}
+.price-note{font-size:.85rem;color:var(--taupe-pale);font-style:italic;font-family:var(--serif);font-size:1.05rem}
+/* ---------- Story / split ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,76px);align-items:center}
+.split .ph img{width:100%;height:100%;object-fit:cover;max-height:520px}
+.split-copy p{color:var(--cream-dim);margin:0 0 16px;font-size:1.04rem}
+.split-copy p:first-of-type{margin-top:18px}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+/* ---------- Occasions ---------- */
+.occ-list{border-top:1px solid var(--line-soft)}
+.occ-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 6px;border-bottom:1px solid var(--line-soft);text-decoration:none;transition:padding .3s ease,background .3s ease}
+.occ-row:hover{background:var(--panel);padding-left:16px}
+.occ-row h3{font-size:clamp(1.4rem,3vw,2rem)}
+.occ-row .arr{color:var(--taupe-light);font-family:var(--serif);font-size:1.5rem}
+/* ---------- Testimonials ---------- */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:960px){.testi-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.testi-grid{grid-template-columns:1fr}}
+.testi{background:var(--panel);border:1px solid var(--line-soft);padding:30px 28px;display:flex;flex-direction:column;gap:16px}
+.testi .mark{font-family:var(--serif);font-size:2.6rem;line-height:.6;color:var(--taupe)}
+.testi blockquote{margin:0;font-family:var(--serif);font-size:1.18rem;font-style:italic;line-height:1.5;color:var(--cream)}
+.testi figcaption{margin-top:auto;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-pale)}
+.award{margin-top:26px;border:1px solid var(--taupe);padding:26px 28px;text-align:center;background:var(--panel)}
+.award h3{font-size:1.6rem;color:var(--taupe-pale)}
+.award p{margin:6px 0 0;color:var(--cream-dim)}
+/* ---------- Markets ---------- */
+.market-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:760px){.market-grid{grid-template-columns:1fr}}
+.market-card{border:1px solid var(--line-soft);background:var(--panel);padding:28px}
+.market-card h3{font-size:1.65rem;margin-bottom:8px}
+.market-card p{margin:3px 0;color:var(--cream-dim)}
+.market-card p strong{color:var(--cream);font-weight:500}
+/* ---------- Contact strip ---------- */
+.strip{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--panel)}
+.strip-in{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;padding:34px clamp(18px,4vw,48px)}
+.strip h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+.strip .details{display:flex;gap:30px;flex-wrap:wrap;color:var(--cream-dim)}
+.strip .details a{color:var(--taupe-pale);text-decoration:none}
+.strip .details a:hover{text-decoration:underline}
+/* ---------- Footer ---------- */
+footer.site{background:#000;border-top:1px solid var(--line-soft)}
+.footer-in{max-width:1400px;margin:0 auto;padding:22px clamp(16px,3vw,40px);display:flex;align-items:center;gap:18px;flex-wrap:nowrap}
+.footer-name{font-family:var(--serif);font-size:1.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.footer-in .spacer{flex:1}
+.footer-link{color:var(--cream-dim);text-decoration:none;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;padding:10px 4px}
+.footer-link:hover{color:var(--cream)}
+.footer-social{display:flex;gap:2px}
+.footer-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;color:var(--taupe-pale)}
+.footer-social a:hover{color:var(--cream)}
+.footer-social svg{width:19px;height:19px;fill:currentColor}
+@media(max-width:560px){
+  .footer-in{gap:9px;padding:20px 14px}
+  .footer-name{font-size:.88rem;min-width:0}
+  .footer-link{font-size:.68rem;letter-spacing:.1em;padding:10px 2px}
+  .footer-social a{width:36px;height:36px}
+}
+/* ---------- Shop ---------- */
+.page-head{padding:clamp(44px,6vw,72px) 0 8px;text-align:center}
+.page-head h1{font-size:clamp(2.4rem,5.4vw,3.8rem)}
+.page-head p{color:var(--cream-dim);max-width:40rem;margin:14px auto 0}
+.shop-tools{position:sticky;top:84px;z-index:30;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);padding:18px 0 14px;border-bottom:1px solid var(--line-soft);margin-bottom:34px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{border:1px solid var(--line);background:transparent;color:var(--cream-dim);font-family:var(--sans);font-size:.76rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;cursor:pointer;transition:all .25s ease;min-height:40px}
+.filter-btn:hover{border-color:var(--taupe-light);color:var(--cream)}
+.filter-btn.active{background:var(--taupe);border-color:var(--taupe);color:#0a0806}
+.tools-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;align-items:center}
+.search-box{flex:1 1 240px;display:flex;align-items:center;gap:10px;border:1px solid var(--line);padding:0 14px;background:var(--panel)}
+.search-box svg{width:17px;height:17px;fill:var(--muted);flex:0 0 auto}
+.search-box input{flex:1;background:transparent;border:0;outline:0;color:var(--cream);font-family:var(--sans);font-size:.95rem;height:44px;min-width:0}
+.search-box input::placeholder{color:var(--muted)}
+.sort-box{display:flex;align-items:center;gap:10px}
+.sort-box label{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+select{font-family:var(--sans);font-size:.92rem;color:var(--cream);background:var(--panel);border:1px solid var(--line);padding:10px 12px;min-height:44px;cursor:pointer}
+.result-count{color:var(--muted);font-size:.85rem;margin:0 0 18px;letter-spacing:.06em}
+.empty-state{border:1px dashed var(--line);padding:56px 24px;text-align:center;background:var(--panel)}
+.empty-state h3{font-size:1.7rem;margin-bottom:8px}
+.empty-state p{color:var(--cream-dim);margin:0}
+/* ---------- Product detail ---------- */
+.crumb{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:26px 0 0}
+.crumb a{color:var(--taupe-pale);text-decoration:none}
+.crumb a:hover{text-decoration:underline}
+.pd{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,68px);padding:26px 0 70px}
+@media(max-width:900px){.pd{grid-template-columns:1fr}}
+.pd-main{background:#fff;border:1px solid var(--line-soft)}
+.pd-main img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.pd-thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pd-thumbs button{width:64px;height:64px;padding:0;border:1px solid var(--line-soft);background:#fff;cursor:pointer;overflow:hidden;flex:0 0 auto}
+.pd-thumbs button.active{border-color:var(--taupe);outline:1px solid var(--taupe)}
+.pd-thumbs img{width:100%;height:100%;object-fit:cover}
+.pd-info h1{font-size:clamp(2rem,4.4vw,3rem);line-height:1.08}
+.pd-info .cats{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:12px 0 0}
+.pd-price{font-family:var(--serif);font-size:1.9rem;color:var(--taupe-pale);margin:18px 0 4px}
+.pd-price .was{color:var(--muted);text-decoration:line-through;font-size:1.3rem;margin-left:10px}
+.pd-desc{border-top:1px solid var(--line-soft);margin-top:22px;padding-top:22px}
+.pd-desc p{color:var(--cream-dim);margin:0 0 14px}
+.opt-group{margin-top:20px}
+.opt-group label{display:block;font-size:.74rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe-pale);margin-bottom:8px}
+.opt-group select{width:100%;max-width:420px}
+.qty-row{display:flex;gap:14px;flex-wrap:wrap;align-items:stretch;margin-top:28px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line)}
+.qty button{width:46px;height:48px;background:transparent;border:0;color:var(--cream);font-size:1.25rem;cursor:pointer}
+.qty output{min-width:36px;text-align:center;font-size:1rem}
+.add-btn{flex:1 1 220px}
+.pd-note{margin-top:16px;font-size:.88rem;color:var(--muted)}
+.added-msg{margin-top:14px;border:1px solid var(--taupe);background:var(--panel);padding:13px 16px;font-size:.92rem;color:var(--cream)}
+/* ---------- Forms ---------- */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:620px){.form-grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-pale)}
+.field input,.field textarea{background:var(--panel);border:1px solid var(--line);color:var(--cream);font-family:var(--sans);font-size:1rem;padding:12px 14px;outline:0;width:100%}
+.field input:focus,.field textarea:focus{border-color:var(--taupe-light)}
+.field .err{display:none;color:#E8B4A0;font-size:.85rem}
+.field.invalid input,.field.invalid textarea{border-color:#C47A5A}
+.field.invalid .err{display:block}
+.form-ok{border:1px solid var(--taupe);background:var(--panel);padding:22px 24px}
+.form-ok h3{font-size:1.5rem;margin-bottom:6px}
+.form-ok p{margin:0;color:var(--cream-dim)}
+/* ---------- Contact layout ---------- */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);padding-bottom:70px}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.contact-facts{display:flex;flex-direction:column;gap:22px;margin-top:26px}
+.fact{border-top:1px solid var(--line-soft);padding-top:16px}
+.fact h4{font-size:.76rem;font-family:var(--sans);font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-pale);margin-bottom:5px}
+.fact p,.fact a{font-size:1.06rem;color:var(--cream);margin:0;text-decoration:none}
+.fact a:hover{text-decoration:underline}
+.map-box{margin:6px 0 70px;border:1px solid var(--line-soft)}
+.map-box iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(35%)}
+.map-cap{padding:12px 16px;font-size:.86rem;color:var(--muted);background:var(--panel);border-top:1px solid var(--line-soft)}
+/* ---------- Cart drawer ---------- */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.66);opacity:0;pointer-events:none;transition:opacity .3s ease;z-index:80}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(430px,94vw);background:#0c0a08;border-left:1px solid var(--line);z-index:90;transform:translateX(102%);transition:transform .38s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column}
+.drawer.gone{display:none}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line-soft)}
+.drawer-head h3{font-size:1.5rem}
+.drawer-body{flex:1;overflow-y:auto;padding:18px 22px}
+.cart-empty{color:var(--cream-dim);text-align:center;padding:38px 0}
+.cart-item{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.cart-item .thumb{width:64px;height:64px;background:#fff;overflow:hidden}
+.cart-item .thumb img{width:100%;height:100%;object-fit:cover}
+.cart-item h4{font-size:1.08rem;line-height:1.25}
+.cart-item .variant{font-size:.8rem;color:var(--muted);margin:2px 0 8px}
+.cart-item .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.mini-qty{display:inline-flex;align-items:center;border:1px solid var(--line)}
+.mini-qty button{width:34px;height:34px;min-height:34px;background:transparent;border:0;color:var(--cream);font-size:1.05rem;cursor:pointer}
+.mini-qty output{min-width:26px;text-align:center;font-size:.92rem}
+.remove-btn{background:none;border:0;color:var(--muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;padding:6px 0;text-decoration:underline}
+.remove-btn:hover{color:var(--cream)}
+.drawer-foot{border-top:1px solid var(--line-soft);padding:18px 22px 22px}
+.subtotal{display:flex;justify-content:space-between;font-family:var(--serif);font-size:1.35rem;margin-bottom:6px}
+.tax-note{font-size:.82rem;color:var(--muted);margin:0 0 14px}
+.checkout-msg{display:none;border:1px solid var(--taupe);background:var(--panel-2);padding:14px 16px;font-size:.92rem;margin-top:14px;color:var(--cream)}
+.checkout-msg.show{display:block}
+.w-full{width:100%}
+/* ---------- Reveal (text only) ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .prod-card,.coll-card img,.prod-card .ph img,.drawer,.overlay{transition:none}
+}
+.view{display:none}
+.view.active{display:block}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="header-in">
+    <a class="logo-link" href="#/" data-nav aria-label="Jane's Unique Gifts &amp; Designs — home">
+      <img id="logoImg" src="" alt="Jane's Unique Gifts &amp; Designs" />
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#/about" data-nav data-route="about">About</a>
+      <a href="#/shop" data-nav data-route="shop">Shop</a>
+      <a href="#/contact" data-nav data-route="contact">Contact Us</a>
+      <a href="#/testimonials" data-nav data-route="testimonials">Testimonials</a>
+      <a href="#/markets" data-nav data-route="markets">Markets</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://www.facebook.com/janesuniquegiftsanddesigns" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.3v3h2.4v7h2.8z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.instagram.com/janesuniquegiftsanddesigns" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.9a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm0-1.7a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm6.3-.3a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 4.2c-2.5 0-2.8 0-3.8.1a5 5 0 0 0-1.7.3 3.4 3.4 0 0 0-2 2 5 5 0 0 0-.3 1.7c0 1 0 1.3 0 3.7s0 2.8.1 3.8a5 5 0 0 0 .3 1.7 3.4 3.4 0 0 0 2 2 5 5 0 0 0 1.7.3c1 .1 1.3.1 3.8.1s2.8 0 3.8-.1a5 5 0 0 0 1.7-.3 3.4 3.4 0 0 0 2-2 5 5 0 0 0 .3-1.7c.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8a5 5 0 0 0-.3-1.7 3.4 3.4 0 0 0-2-2 5 5 0 0 0-1.7-.3c-1-.1-1.3-.1-3.8-.1zM12 2.5c2.6 0 2.9 0 3.9.1 1 .1 1.5.2 1.9.4.5.2.9.4 1.2.8.4.3.6.7.8 1.2.2.4.3.9.4 1.9.1 1 .1 1.3.1 3.9s0 2.9-.1 3.9a6.6 6.6 0 0 1-.4 1.9c-.2.5-.4.9-.8 1.2-.3.4-.7.6-1.2.8-.4.2-.9.3-1.9.4-1 .1-1.3.1-3.9.1s-2.9 0-3.9-.1a6.6 6.6 0 0 1-1.9-.4 3.4 3.4 0 0 1-1.2-.8 3.4 3.4 0 0 1-.8-1.2 6.6 6.6 0 0 1-.4-1.9c-.1-1-.1-1.3-.1-3.9s0-2.9.1-3.9c.1-1 .2-1.5.4-1.9.2-.5.4-.9.8-1.2.3-.4.7-.6 1.2-.8.4-.2.9-.3 1.9-.4 1-.1 1.3-.1 3.9-.1z"/></svg>
+      </a>
+      <button class="icon-btn" id="cartBtn" type="button" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8V7a6 6 0 1 1 12 0v1h3l-.8 12.1a2 2 0 0 1-2 1.9H5.8a2 2 0 0 1-2-1.9L3 8h3zm2 0h8V7a4 4 0 1 0-8 0v1z"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn burger" id="burgerBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="#/about" data-nav>About</a>
+    <a href="#/shop" data-nav>Shop</a>
+    <a href="#/contact" data-nav>Contact Us</a>
+    <a href="#/testimonials" data-nav>Testimonials</a>
+    <a href="#/markets" data-nav>Markets</a>
+  </nav>
+</header>
+
+<main id="app">
+  <!-- ================= HOME ================= -->
+  <section class="view" id="view-home">
+    <div class="hero">
+      <div class="wrap hero-in">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Chilliwack BC · Est. October 2017</p>
+          <h1 class="welcome">Welcome to<br />Our <em>Store</em></h1>
+          <p class="lede">Hello my name is Jane, I am the owner of Jane's Unique Gifts &amp; Designs. Together with my husband Chris we have become a local mom &amp; pop shop. We love what we do and have fun doing it.</p>
+          <div class="hero-ctas">
+            <a class="btn solid" href="#/shop" data-nav>Shop the Collection</a>
+            <a class="btn" href="#/about" data-nav>Our Story</a>
+          </div>
+          <div class="hero-meta">
+            <span><i></i>Home Based in Chilliwack BC</span>
+            <span><i></i>Custom Orders Welcome</span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img id="heroPhoto" src="" alt="Welcome hanging planters at Jane's Unique Gifts &amp; Designs in Chilliwack BC" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Browse the Shop</p>
+          <h2>Featured Collections</h2>
+          <div class="hairline"></div>
+        </div>
+        <div class="coll-grid" id="collGrid"></div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Handmade &amp; Curated</p>
+          <h2>Featured Products</h2>
+          <div class="hairline"></div>
+        </div>
+        <div class="prod-grid" id="featuredGrid"></div>
+        <div style="text-align:center;margin-top:40px">
+          <a class="btn" href="#/shop" data-nav>View All Products</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="wrap split">
+        <div class="ph"><img id="storyPhoto" src="" alt="Welcome hanging planters at the home based shop in Chilliwack BC" loading="lazy" /></div>
+        <div class="split-copy reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2 style="font-size:clamp(2rem,4vw,2.9rem)">A Local Mom &amp; Pop Shop</h2>
+          <p>Hello my name is Jane, I am the owner of Jane's Unique Gifts &amp; Designs. Together with my husband Chris we have become a local mom &amp; pop shop. We love what we do and have fun doing it. Our items include t-shirts, home decor, drinkware, and seasonal. We welcome custom orders.</p>
+          <p>We are a home based business located in Chilliwack BC. Together we thank you for the continued support you have shown our business. Established October 2017.</p>
+          <a class="btn" href="#/about" data-nav style="margin-top:8px">More About Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head left reveal">
+          <p class="eyebrow">Find the Perfect Gift</p>
+          <h2>Shop by Occasion</h2>
+          <div class="hairline"></div>
+        </div>
+        <div class="occ-list" id="occList"></div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kind Words</p>
+          <h2>What Our Customers Say</h2>
+          <div class="hairline"></div>
+        </div>
+        <div class="testi-grid" id="homeTesti"></div>
+        <div style="text-align:center;margin-top:36px">
+          <a class="btn" href="#/testimonials" data-nav>Read All Testimonials</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Find Us in Person</p>
+          <h2>Upcoming Markets 2026</h2>
+          <p>Here you will find a list of upcoming markets we will be attending. We hope to see you there!</p>
+          <div class="hairline"></div>
+        </div>
+        <div class="market-grid" id="homeMarkets"></div>
+        <div style="text-align:center;margin-top:36px">
+          <a class="btn" href="#/markets" data-nav>View Markets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div class="wrap strip-in reveal">
+        <div>
+          <h2>We Welcome Custom Orders</h2>
+          <div class="details" style="margin-top:8px">
+            <span>Chilliwack BC</span>
+            <a href="mailto:janesuniquegiftsanddesigns@shaw.ca">janesuniquegiftsanddesigns@shaw.ca</a>
+            <a href="tel:+16042171700">604-217-1700</a>
+          </div>
+        </div>
+        <a class="btn solid" href="#/contact" data-nav>Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SHOP ================= -->
+  <section class="view" id="view-shop">
+    <div class="wrap">
+      <div class="page-head reveal">
+        <p class="eyebrow">Jane's Unique Gifts &amp; Designs</p>
+        <h1>Welcome</h1>
+        <p>Every item is made with care in our home based shop in Chilliwack BC — t-shirts, home decor, drinkware, seasonal gifts and more.</p>
+      </div>
+    </div>
+    <div class="shop-tools">
+      <div class="wrap">
+        <div class="filters" id="filterBar" role="group" aria-label="Filter by category"></div>
+        <div class="tools-row">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 1 0 4.9 14.3l5 5 1.5-1.4-5-5A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+            <input type="search" id="shopSearch" placeholder="Search products…" aria-label="Search products" />
+          </div>
+          <div class="sort-box">
+            <label for="shopSort">Sort</label>
+            <select id="shopSort">
+              <option value="relevance">Relevance</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap" style="padding-bottom:80px">
+      <p class="result-count" id="resultCount"></p>
+      <div class="prod-grid" id="shopGrid"></div>
+      <div class="empty-state" id="shopEmpty" hidden>
+        <h3>No results found</h3>
+        <p>No results match your search. Try removing a few filters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCT ================= -->
+  <section class="view" id="view-product">
+    <div class="wrap">
+      <p class="crumb"><a href="#/shop" data-nav>Shop</a> &nbsp;/&nbsp; <span id="pdCrumb"></span></p>
+      <div class="pd">
+        <div>
+          <div class="pd-main"><img id="pdMain" alt="" /></div>
+          <div class="pd-thumbs" id="pdThumbs"></div>
+        </div>
+        <div class="pd-info">
+          <h1 id="pdTitle"></h1>
+          <p class="cats" id="pdCats"></p>
+          <p class="pd-price" id="pdPrice"></p>
+          <div id="pdOptions"></div>
+          <div class="qty-row" id="pdBuyRow">
+            <div class="qty" aria-label="Quantity">
+              <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <output id="qtyOut">1</output>
+              <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="btn solid add-btn" type="button" id="addToCartBtn">Add To Cart</button>
+          </div>
+          <a class="btn w-full" id="pdContactBtn" href="#/contact" data-nav hidden style="margin-top:28px">Contact Jane for Pricing</a>
+          <div class="added-msg" id="addedMsg" hidden></div>
+          <div class="pd-desc" id="pdDesc"></div>
+        </div>
+      </div>
+      <div id="relatedWrap" style="padding-bottom:80px">
+        <div class="section-head left reveal">
+          <p class="eyebrow">Keep Looking</p>
+          <h2>You May Also Like</h2>
+          <div class="hairline"></div>
+        </div>
+        <div class="prod-grid" id="relatedGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="view" id="view-about">
+    <div class="wrap">
+      <div class="page-head reveal">
+        <p class="eyebrow">Since October 2017</p>
+        <h1>About</h1>
+        <div class="hairline"></div>
+      </div>
+      <div class="split" style="padding:26px 0 80px">
+        <div class="ph"><img id="aboutPhoto" src="" alt="Welcome hanging planters at Jane's Unique Gifts &amp; Designs, Chilliwack BC" /></div>
+        <div class="split-copy reveal">
+          <p>Hello my name is Jane, I am the owner of Jane's Unique Gifts &amp; Designs. Together with my husband Chris we have become a local mom &amp; pop shop. We love what we do and have fun doing it. Our items include t-shirts, home decor, drinkware, and seasonal. We welcome custom orders.</p>
+          <p>We are a home based business located in Chilliwack BC. Together we thank you for the continued support you have shown our business. Established October 2017.</p>
+          <p>Please note. Many of our home decor items are made when an order is placed. Please allow extra time for that. We will email once we receive an order to confirm a completion date.</p>
+          <div class="contact-facts" style="margin-top:30px">
+            <div class="fact">
+              <h4>Location</h4>
+              <p>Chilliwack BC</p>
+            </div>
+            <div class="fact">
+              <h4>Email</h4>
+              <a href="mailto:janesuniquegiftsanddesigns@shaw.ca">janesuniquegiftsanddesigns@shaw.ca</a>
+            </div>
+            <div class="fact">
+              <h4>Phone</h4>
+              <a href="tel:+16042171700">604-217-1700</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="view" id="view-testimonials">
+    <div class="wrap" style="padding-bottom:80px">
+      <div class="page-head reveal">
+        <p class="eyebrow">Kind Words</p>
+        <h1>Testimonials</h1>
+        <div class="hairline"></div>
+      </div>
+      <div class="testi-grid" id="allTesti" style="margin-top:20px"></div>
+      <div class="award reveal">
+        <p class="eyebrow" style="margin-bottom:8px">Award</p>
+        <h3>CommunityVotes Chilliwack 2021 — Platinum Winner</h3>
+        <p>Jane's Unique Gifts &amp; Designs — Gift Shop</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARKETS ================= -->
+  <section class="view" id="view-markets">
+    <div class="wrap" style="padding-bottom:80px">
+      <div class="page-head reveal">
+        <p class="eyebrow">Find Us in Person</p>
+        <h1>Markets</h1>
+        <p>Upcoming markets 2026. Here you will find a list of upcoming markets we will be attending. We hope to see you there!</p>
+        <div class="hairline"></div>
+      </div>
+      <div class="market-grid" id="allMarkets" style="margin-top:20px"></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="view" id="view-contact">
+    <div class="wrap">
+      <div class="page-head reveal">
+        <p class="eyebrow">We'd Love to Hear From You</p>
+        <h1>Contact us.</h1>
+        <p>Chilliwack BC</p>
+        <div class="hairline"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <h2 style="font-size:1.9rem">Get in Touch</h2>
+          <div class="contact-facts">
+            <div class="fact">
+              <h4>Location</h4>
+              <p>Chilliwack BC</p>
+            </div>
+            <div class="fact">
+              <h4>Email</h4>
+              <a href="mailto:janesuniquegiftsanddesigns@shaw.ca">janesuniquegiftsanddesigns@shaw.ca</a>
+            </div>
+            <div class="fact">
+              <h4>Phone</h4>
+              <a href="tel:+16042171700">604-217-1700</a>
+            </div>
+            <div class="fact">
+              <h4>Hours</h4>
+              <p>Monday – Sunday: 9:00 AM – 5:00 PM</p>
+            </div>
+            <div class="fact">
+              <h4>Follow Along</h4>
+              <p>
+                <a href="https://www.facebook.com/janesuniquegiftsanddesigns" target="_blank" rel="noopener">Facebook</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.instagram.com/janesuniquegiftsanddesigns" target="_blank" rel="noopener">Instagram</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="field" data-field="firstName">
+                <label for="cfFirst">First Name *</label>
+                <input id="cfFirst" name="firstName" type="text" autocomplete="given-name" required />
+                <span class="err">Please enter your first name.</span>
+              </div>
+              <div class="field" data-field="lastName">
+                <label for="cfLast">Last Name *</label>
+                <input id="cfLast" name="lastName" type="text" autocomplete="family-name" required />
+                <span class="err">Please enter your last name.</span>
+              </div>
+              <div class="field full" data-field="email">
+                <label for="cfEmail">Email *</label>
+                <input id="cfEmail" name="email" type="email" autocomplete="email" required />
+                <span class="err">Please enter a valid email address.</span>
+              </div>
+              <div class="field full" data-field="message">
+                <label for="cfMsg">Message *</label>
+                <textarea id="cfMsg" name="message" rows="6" required></textarea>
+                <span class="err">Please write a message.</span>
+              </div>
+            </div>
+            <button class="btn solid" type="submit" style="margin-top:20px">Send</button>
+          </form>
+          <div class="form-ok" id="contactOk" hidden>
+            <h3>Thank you for reaching out.</h3>
+            <p>This is a website concept demo, so your message was not sent. To reach Jane directly, please email <a href="mailto:janesuniquegiftsanddesigns@shaw.ca" style="color:var(--taupe-pale)">janesuniquegiftsanddesigns@shaw.ca</a> or call 604-217-1700.</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-box">
+        <iframe title="Map of Chilliwack, BC, Canada" loading="lazy" src="https://www.google.com/maps?q=Chilliwack,+BC,+Canada&z=11&output=embed"></iframe>
+        <p class="map-cap">Jane's Unique Gifts &amp; Designs Chilliwack, Chilliwack BC, Canada</p>
+      </div>
+      <img src="https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5ae84e53-add1-42b1-accd-9002dc265263/website.jpg?format=1500w" alt="Jane's Unique Gifts &amp; Designs — Welcome planters, CommunityVotes Chilliwack 2021 Platinum Winner award, and Jane &amp; Chris" style="display:block;width:100%;height:auto;margin:0 0 70px">
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="footer-in">
+    <span class="footer-name">Jane's Unique Gifts &amp; Designs</span>
+    <span class="spacer"></span>
+    <a class="footer-link" href="#/contact" data-nav>Contact Us</a>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/janesuniquegiftsanddesigns" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.3v3h2.4v7h2.8z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/janesuniquegiftsanddesigns" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.9a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm0-1.7a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm6.3-.3a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 4.2c-2.5 0-2.8 0-3.8.1a5 5 0 0 0-1.7.3 3.4 3.4 0 0 0-2 2 5 5 0 0 0-.3 1.7c0 1 0 1.3 0 3.7s0 2.8.1 3.8a5 5 0 0 0 .3 1.7 3.4 3.4 0 0 0 2 2 5 5 0 0 0 1.7.3c1 .1 1.3.1 3.8.1s2.8 0 3.8-.1a5 5 0 0 0 1.7-.3 3.4 3.4 0 0 0 2-2 5 5 0 0 0 .3-1.7c.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8a5 5 0 0 0-.3-1.7 3.4 3.4 0 0 0-2-2 5 5 0 0 0-1.7-.3c-1-.1-1.3-.1-3.8-.1zM12 2.5c2.6 0 2.9 0 3.9.1 1 .1 1.5.2 1.9.4.5.2.9.4 1.2.8.4.3.6.7.8 1.2.2.4.3.9.4 1.9.1 1 .1 1.3.1 3.9s0 2.9-.1 3.9a6.6 6.6 0 0 1-.4 1.9c-.2.5-.4.9-.8 1.2-.3.4-.7.6-1.2.8-.4.2-.9.3-1.9.4-1 .1-1.3.1-3.9.1s-2.9 0-3.9-.1a6.6 6.6 0 0 1-1.9-.4 3.4 3.4 0 0 1-1.2-.8 3.4 3.4 0 0 1-.8-1.2 6.6 6.6 0 0 1-.4-1.9c-.1-1-.1-1.3-.1-3.9s0-2.9.1-3.9c.1-1 .2-1.5.4-1.9.2-.5.4-.9.8-1.2.3-.4.7-.6 1.2-.8.4-.2.9-.3 1.9-.4 1-.1 1.3-.1 3.9-.1z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer gone" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="icon-btn" id="cartClose" type="button" aria-label="Close cart" style="color:var(--cream)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot">
+    <div class="subtotal"><span>Subtotal</span><span id="cartTotal">$0.00 CAD</span></div>
+    <p class="tax-note">Prices in Canadian dollars (CAD).</p>
+    <button class="btn solid w-full" type="button" id="checkoutBtn">Checkout</button>
+    <div class="checkout-msg" id="checkoutMsg">This is a website concept demo — nothing was ordered and no payment was taken. To place a real order, please contact Jane at janesuniquegiftsanddesigns@shaw.ca or 604-217-1700.</div>
+  </div>
+</aside>
+<script>
+"use strict";
+var CATALOGUE = {"logo":"https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/bbcf9dae-65e9-4c0c-96c0-4bb4ed7e321c/Untitled+design+%288%29.png","aboutPhoto":"https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1631222065969-B8DMARRC262IX68T1V38/186564206_10159588510738319_7212824966032418328_n.jpg?format=1500w","categoriesOrder":["All","Jane's Lip Balm","Paint Your Plaster","Ladies","Mens","Infant, Toddlers and Youth","Home Decor","Seasonal & Special Ocassions","Teachers","Drinkware","Digital downloads"],"products":[{"title":"Sweatshirt","slug":"sweatshirt-1","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/sweatshirt-1","categories":["Ladies"],"onSale":false,"priceCents":3700,"displayPrice":"from $37.00","displayOriginal":null,"variantOptions":["Color","Size"],"variants":[{"attributes":{"Size":"Small","Color":"Black"},"priceCents":3700,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Black"},"priceCents":3700,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Black"},"priceCents":3700,"salePriceCents":null},{"attributes":{"Size":"XL","Color":"Black"},"priceCents":3700,"salePriceCents":null},{"attributes":{"Size":"2XL","Color":"Black"},"priceCents":4000,"salePriceCents":null},{"attributes":{"Size":"3XL","Color":"Black"},"priceCents":4300,"salePriceCents":null},{"attributes":{"Size":"4XL","Color":"Black"},"priceCents":4500,"salePriceCents":null},{"attributes":{"Size":"5XL","Color":"Black"},"priceCents":5000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/83e86b23-541e-4624-8928-45827706b738/Naughty+list.jpg?format=1200w"],"description":"Mountains and signature will not be in the image.\n\nCute and sassy a fun image for Christmas.\n\nFeel the comfort in these soft oversized sweatshirts."},{"title":"T-Shirt","slug":"kjmn28kdk4e6mcsfd87blaxk389rde","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/kjmn28kdk4e6mcsfd87blaxk389rde","categories":["Mens"],"onSale":false,"priceCents":2500,"displayPrice":"from $25.00","displayOriginal":null,"variantOptions":["Color","Size"],"variants":[{"attributes":{"Size":"Small","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XL","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"2XL","Color":"Black"},"priceCents":2800,"salePriceCents":null},{"attributes":{"Size":"3XL","Color":"Black"},"priceCents":3000,"salePriceCents":null},{"attributes":{"Size":"4XL","Color":"Black"},"priceCents":3400,"salePriceCents":null},{"attributes":{"Size":"5XL","Color":"Black"},"priceCents":3700,"salePriceCents":null},{"attributes":{"Size":"Small","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XL","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"2XL","Color":"Navy"},"priceCents":2800,"salePriceCents":null},{"attributes":{"Size":"3XL","Color":"Navy"},"priceCents":3000,"salePriceCents":null},{"attributes":{"Size":"4XL","Color":"Navy"},"priceCents":3400,"salePriceCents":null},{"attributes":{"Size":"5XL","Color":"Navy"},"priceCents":3700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5e5edf1d-0078-4035-9176-18d8a2ef8148/Father+of.jpg?format=1200w"],"description":"Please note my watermark of mountains and signature will be removed.\n\nNot sure what to get dad for Christmas this will add smiles and laughter."},{"title":"Simmering pots","slug":"simmering-pots","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/simmering-pots","categories":["Seasonal & Special Ocassions","Teachers"],"onSale":false,"priceCents":800,"displayPrice":"$8.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":800,"salePriceCents":800}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/0f65f6b7-f8cf-4576-ba71-1c82c6c621a5/Simmering+Pots+%283%29.jpg+no+price.jpg?format=1200w"],"description":"Fill your home with the magical scents of Christmas! Our Christmas simmering pots bring the warmth, comfort, and cozy aromas of the holidays right into your home."},{"title":"Jane's Lip Balm","slug":"janes-lip-balm","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/janes-lip-balm","categories":["Jane's Lip Balm"],"onSale":false,"priceCents":400,"displayPrice":"$4.00","displayOriginal":null,"variantOptions":["Scents"],"variants":[{"attributes":{"Scents":"Original no scent"},"priceCents":400,"salePriceCents":null},{"attributes":{"Scents":"vanilla"},"priceCents":400,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/54f00b26-b0fb-4a21-9f1b-daa77cc66190/Jane%27s+Lip+Balm.jpg?format=1200w"],"description":"Experience the nourishing power of Jane's Lip Balm, crafted with 100% natural ingredients including beeswax, shea butter, coconut oil, and vitamin E. This luxurious balm instantly hydrates and softens your lips, providing a protective barrier against dryness while delivering essential nutrients for a healthy, radiant smile. Embrace the natural way to keep your lips looking and feeling their best."},{"title":"Automatic Digital download","slug":"digital-download","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/digital-download","categories":[],"onSale":false,"priceCents":450,"displayPrice":"$4.50","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":450,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/28042954-6f01-4bfb-aa55-61c84f097df8/Copy+of+Wedding+Cards+%26+invitations_DPH+%281%29.png?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ef0d7586-df62-460b-95bc-983312177e62/2.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/d867f631-b72f-4ca4-b1d4-122488018f13/3.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/9a80bd38-b473-4c4b-9248-8172c4a1b35a/4.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/102e32e3-c3df-4f30-a89a-51b8c1155c40/5.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/e973c143-025a-41a0-a305-edcd5a027e3e/6.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/d223055d-f6a4-441c-b5b7-a535d5b7f976/7.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/2a60dcc0-b85c-48d6-a5f7-01c5ed61c417/15.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/bc88806a-3835-4caf-8e1f-3c84f8eebea8/9.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/54c97459-f16c-4d26-963d-d26c67d5fcff/10.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/40bacb7d-62e1-4d21-b204-c512fc725f66/12.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/c8db9598-fb4d-4de7-986a-fbfdd71dc5fc/13.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1fd6e5bb-393b-42b3-878f-1405944b441a/15.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/e1415c13-4b93-45b1-8c95-6a103d04a00e/16.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/12b31a9e-06f7-4546-8cca-c3ef0d39e381/17.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/911ce714-cb66-4aec-99b4-947e94e28145/18.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/135d12a6-2fa1-4e1a-8f2c-fff7b00e5ca0/19.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/616311ee-0cc1-42fe-8819-9b177cb38574/20.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b1ae3667-f077-4dff-b149-72e409d32c55/21.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/3062f6bd-86c7-4d14-8115-61f85450dd88/22.jpg?format=1200w"],"description":"This purchase will be emailed automatically, on completion of purchase.\n\nWedding cards & invitations. The link will take you to Canva, for you personalize and make them your own."},{"title":"Hoody","slug":"hoody-3","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/hoody-3","categories":["Mens","Ladies"],"onSale":false,"priceCents":5500,"displayPrice":"from $55.00","displayOriginal":null,"variantOptions":["Size","Color"],"variants":[{"attributes":{"Size":"Sm","Color":"Black"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Sm","Color":"Navy"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Sm","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Black"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Navy"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Black"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Navy"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"Black"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"Navy"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"Black"},"priceCents":5700,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"Navy"},"priceCents":5700,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"Grey"},"priceCents":5700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/84636f12-2cca-4209-a95e-3054e8c1054d/Fuck+you.jpg?format=1200w"],"description":"QR code design with a hidden message…\n\nFuck you"},{"title":"T-shirt","slug":"ggnwlnl4xjt2rb7hkac4alh58j4yff","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/ggnwlnl4xjt2rb7hkac4alh58j4yff","categories":["Mens"],"onSale":false,"priceCents":2500,"displayPrice":"from $25.00","displayOriginal":null,"variantOptions":["Size","Color"],"variants":[{"attributes":{"Size":"Sm","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Sm","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Sm","Color":"grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Med","Color":"grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"Navy"},"priceCents":2700,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"Black"},"priceCents":2700,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"grey"},"priceCents":2700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b00d9ffd-9f06-4083-84e9-af14f1d4db12/Dad+Shit.jpg?format=1200w"],"description":"Funny t-shirt for dad."},{"title":"Sweatshirt","slug":"sweatshirt","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/sweatshirt","categories":["Ladies"],"onSale":false,"priceCents":3500,"displayPrice":"from $35.00","displayOriginal":null,"variantOptions":["Material","Size"],"variants":[{"attributes":{"Size":"sm","Material":"50/50"},"priceCents":3500,"salePriceCents":null},{"attributes":{"Size":"med","Material":"50/50"},"priceCents":3500,"salePriceCents":null},{"attributes":{"Size":"large","Material":"50/50"},"priceCents":3500,"salePriceCents":null},{"attributes":{"Size":"XL large","Material":"50/50"},"priceCents":3500,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Material":"50/50"},"priceCents":3700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/a58d78dd-c8cf-4921-ad04-e9ccb82911c1/Cute+but+Feral.jpg?format=1200w"],"description":"A sweatshirt featuring a raccoon design, cute but feral."},{"title":"Mama hoody","slug":"mama-hoody","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/mama-hoody","categories":["Ladies"],"onSale":false,"priceCents":5500,"displayPrice":"from $55.00","displayOriginal":null,"variantOptions":["Size","Color"],"variants":[{"attributes":{"Size":"small","Color":"beige"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"med","Color":"beige"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"large","Color":"beige"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"xl","Color":"beige"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"xxl","Color":"beige"},"priceCents":5700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5e9e86eb-a7da-448c-8c11-e7f66a1e5499/Mama+heart+and+names+on+sleeve.jpg?format=1200w"],"description":"Personalized Mama Hoody with established date. Kids Names on the Sleeve with heart."},{"title":"48 Baby Shower Games","slug":"80z0fj220oye3oqm3aqpo1xk7bzkie","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/80z0fj220oye3oqm3aqpo1xk7bzkie","categories":["Digital downloads"],"onSale":false,"priceCents":350,"displayPrice":"$3.50","displayOriginal":null,"variantOptions":[],"variants":[],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/9c7f7760-c073-4f5f-be82-df583101e61a/Title.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/cf6ff7f4-7474-4128-8925-d56e98483109/Who+knows+mommy+best.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b0dccf9d-037e-430e-9912-e54803bdb097/Baby+Bingo.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/f12deb3d-9914-4a14-bab7-1594947ebffa/Word+Scramble.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ba3b467c-9392-4dda-84f2-9bc26e69d555/Pregnant+Animals.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/276feb0e-27ef-4e9e-9b00-4d74c823ca3b/How+big+is+Mommys+Belly.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/7e058f38-3b34-49ae-b208-89c9c3639ced/Alphabet+Names.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/0dce49f4-ec96-47a8-ae08-f24b55368b98/Alphabet+baby+names+2.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/eb3dfaec-e1db-4f9f-a61f-dd8b2cf7418f/Mommy+or+Daddy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/95ddc14e-3476-4e88-a49e-fdcc75b40892/Higher+or+lower.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/7ee18479-e0f9-43e8-a5d4-8766814e247e/Boy+or+Girl.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/9d87ce93-8cef-42d3-b1ee-117a550ac457/Whats+in+Your+Bag.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b299b0ad-1ccc-45c1-872d-c9f30e1e0946/Whats+in+your+phone.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/00143ef0-eb14-47f5-b392-68039852521e/Nursery+Rhymes.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/3ed7335a-1d87-4ebd-abf1-02ab64beb11d/Baby+Animals.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/02370fed-2047-40d4-a430-f1251c39aa1e/Alphabet+baby+items.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/da8a12fc-2d18-4c27-b64c-cf8d25125247/Baby+drawing.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/4304b660-285f-4bda-9b73-a1fa23590122/Where+is+Mommy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5a41402b-2306-40c9-bb00-72b52e8607d1/Where+is+Daddy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/64767388-0f61-4ed3-8a88-fd0c01caa9e6/Don%27t+say+Boy+or+Girl.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/bc4dc02c-3b93-46ce-966a-de4209795f06/Advice+for+Mommy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b907e291-3ace-4e75-9f96-37bc6251bbf9/Avice+for+Daddy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/bc8e18ac-17d9-4178-aa26-850063634723/Find+the+Guest+Bingo.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ee568417-d14e-4948-993e-6b27e514dee2/1st+Year+Bucket+list.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/22605d56-6448-4b65-b42f-3060322f7790/How+many+candies+are+in+the+jar.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/91c85ed4-1808-40e0-8ad8-3d4f3f1f345a/Name+that+tune.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/a3825a3e-3cdb-43de-9db1-1126ab59fac5/Name+that+baby+song.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/2ba19ff5-f2bc-49b8-8dd5-68cde85d4ad1/Character+match.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/11b591c5-78e1-4669-9e6a-1a2dd734bffe/Guess+ths+sweet+mess.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/81e750e2-7869-4d53-9dd4-dc10e1898734/Message+in+a+bottle.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/3d1a446a-56a3-4f1f-b7f6-64b84a68acd3/Baby+translation.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/184c6452-471c-4f74-81a3-31335000db11/Guess+how+many+jelly+beans+in+the+jar.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/badec889-08b4-441a-a4d6-7d88b39d69f8/Truth+%26+Lies.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/4e7e3bdf-4625-4780-8d65-99a9910107e1/Who+Am+I.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/d0084c19-01f7-45db-b8f5-25e1abb4e771/Guess+the+baby+food.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/832fed5c-ab0c-4603-815a-f85a5b61e17f/Baby+features.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/76cc8e4c-97c7-447a-9636-249ac98e6c95/Celebrity+babies.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/2a8972d5-eea8-4199-b4ed-947ed7f56c95/Pacifier+Hunt.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/f18534af-a2a3-4373-96c2-2d9e851e7136/Guess+whats+in+the+bag.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/df48388e-bd3d-4907-929a-857de3f914d5/Baby+Brain.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/e212e32f-ec4c-4720-bd50-07f7bd9e104a/Baby+word+match.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b0d6dc4d-53a8-496b-b4fc-e7b6f91297de/Cartoon+Moms.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/516d66d1-e858-4515-a3dc-97121c5c5e2f/Name+that+Baby.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b0e66eae-4061-4dca-a80a-558d460ffbcb/Finish+Daddy%27s+Sentence.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/6cb35d88-c01b-4cbb-9944-f1333deac4dc/Finish+Mommy%27s+Sentence.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/49a6772b-b97f-4430-9c55-aba5b0132df4/46.+Would+Mommy+Rather.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ceb72422-4a38-4118-8b1b-6b3e96851956/47.+Would+Daddy+Rather.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ed48475f-2121-4680-a31b-3112e01c0ca2/Baby+Prediction.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/0551bc88-622a-4a94-b121-c933aa927e01/The+Happy+Family.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b1f30ebb-b6b6-4405-913d-e84ee822deed/The+Answers.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/8206e4d4-b076-421f-9c9c-f12c53c709d2/The+Answers+2.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/6fea5f3e-e891-4abf-9638-fb034c732602/The+Answer+3.jpg?format=1200w"],"description":"Discover 48 exciting baby shower games along with their answers for a fun-filled celebration.\n\nThis is download only, no physical item will be delivered.\n\nCustomers receive a secure link to the file lasting 24 hours after the first download."},{"title":"Size Chart","slug":"size-chart","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/size-chart","categories":["Digital downloads"],"onSale":false,"priceCents":95,"displayPrice":"$0.95","displayOriginal":null,"variantOptions":[],"variants":[],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/e10a8792-2700-4172-af5d-418cd6832027/Your+paragraph+text.png?format=1200w"],"description":"The Gildan 5000 unisex heavy cotton t-shirt."},{"title":"The Ultimate Guide to Airbnb: Your Step-by-Step Downloadable E book","slug":"the-ultimate-guide-to-airbnb-your-step-by-step-downloadable-e-book","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/the-ultimate-guide-to-airbnb-your-step-by-step-downloadable-e-book","categories":["Digital downloads"],"onSale":true,"priceCents":650,"displayPrice":"$6.50","displayOriginal":"$10.00","variantOptions":[],"variants":[],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/6acdcbcc-95d9-4d46-b918-36778404711a/Copy+of+The+Ultimate+Guide+to+Airbnb+and+Hosting_DPH.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/11cdfb60-afe9-4125-b681-44fb39dd7283/1.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/9c453f0e-177f-4073-9c76-6773b03988bb/2.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ac0e5169-0da0-4de3-b325-3010d6b037f8/4.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/9552780a-07b5-4cbb-add8-70d9f6bbc7c3/5.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/c406b3c0-a934-41be-99be-83bfa329a000/6.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/500757b5-b25d-411a-9373-79e72ea17504/7.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/83984bf6-49ce-4752-b1ea-a66c63c95759/8.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5ea0be16-24a4-482b-a158-eb8d1e4eea7e/9.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/c616c015-c98c-4bd6-b99c-4a006e6e8d98/11.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/d920b99b-f413-4915-81a2-91e312e0558b/13.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/c1d263f8-740c-48ac-8dd8-ef2c722d783e/14.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/904ba87b-fa33-4d84-82ef-95709eb7c496/15.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/75b1fbb4-db3b-49e6-a75f-160d6ccc2b95/16.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5f85af65-61bb-46f8-8728-62bfab55ef50/17.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/072481b8-893e-40fa-928c-4b493b87b367/18.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/bce29da0-d01d-42b8-b324-b280ff9125b7/19.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/63e9b80b-cbae-479f-acef-6f6a23df3452/20.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/cb067a9e-88cb-4ebf-a49a-fcb2a88563da/21.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/86f6b2ba-1edb-435c-bb96-f25241c7eb2f/22.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/720c91ec-f009-478c-96f3-0e3ba4811f6b/23.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/a35d1bd0-995f-4344-80ee-3233b41b8301/24.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/2eaec5cb-03cc-42da-9f9b-6ec8d78537d3/25.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/591b0099-79c3-4acd-9200-8bf4a2841336/26.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1909ff26-86c1-4212-b704-f6bfe8038418/27.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/d52dcce9-f365-48f5-88f3-8d8fd7c77706/28.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b2853598-c243-4afe-b914-51ffd322d7d7/29.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/6dd6c8c3-2cd4-4941-a082-856d28ebf7bd/30.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/154c418f-7257-4101-a69f-79912c02fdfa/31.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/91a10f61-fcfd-49b1-aaa5-42015beaa3e0/32.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/13345043-5bb6-4cd5-b35a-18d64e1aeff9/33.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/530f248d-a7b0-43e1-b42b-626b20902169/34.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/a8086b63-9fb1-469d-81a2-e8968ae91076/35.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5feaef65-94a6-473b-bc5d-44a8d78b183c/36.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/41e740df-c209-4746-af5a-f4cbd65d0893/37.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/5e915d69-3cfa-4c37-82eb-6949b8509bc1/38.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/3cd9403f-d4f7-4554-8f38-88b972d4f543/39.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/353caba5-b6c6-4ba5-9506-92853ac42722/40.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ae5a78af-3bde-460a-b4d1-87732fb73a10/41.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/34c4dcc6-56bc-4327-b2da-21a0f2530679/42.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/8054c892-34f0-4cbe-88bc-7969294fbefb/43.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/4da870aa-f694-4d51-9176-fa0f5887a5d9/44.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/b5932ed2-eadb-4eae-8811-5005abc566c7/45.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/32bf1a65-feb2-4588-b9d6-8899d8189db7/46.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/8c83446a-a11b-4a03-8a0b-339dc57873f9/47.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/f2825e94-d722-4558-98c2-1b8df0d9deeb/48.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/26008121-1bf8-4787-a4c7-257dd563bf2b/49.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/11b3a8d0-d20c-4721-a064-902c19b6411e/50.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/fe04d4d1-3070-4c26-a38d-2193722e912e/51.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/087091d8-0680-4240-a868-8e3a3723014d/52.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/d0776a4d-b9b8-4ab0-a28c-a8dde3dedde0/53.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/69529572-4ff3-4ea3-8a2c-4f500e32629a/54.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/7aeb3e6a-d6e2-4105-8074-e79401fb0b38/55.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/cc6cfac7-6171-4753-8add-cda56680880f/56.jpg?format=1200w"],"description":"Are you ready to dive into the world of Airbnb? Whether you're a seasoned host or a curious traveler, our Ultimate Guide to Airbnb is the perfect resource for you! This comprehensive e book is designed to equip you with everything you need to know about renting on Airbnb, maximizing your earnings, and ensuring a smooth hosting experience."},{"title":"$10,000 in 52 weeks","slug":"10000-in-52-weeks","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/10000-in-52-weeks","categories":["Digital downloads"],"onSale":false,"priceCents":195,"displayPrice":"$1.95","displayOriginal":null,"variantOptions":[],"variants":[],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/ad703381-0e23-4195-b5e6-c6888cb16fda/%2410%2C000+in+a+year.jpg?format=1200w"],"description":"Okay, let's talk about the very achievable goal of saving $10,000 in 2025. This \"download\" is a mental framework, a set of strategies, and a commitment you make to yourself to reach this significant milestone by the end of 2025."},{"title":"T-shirt","slug":"t5ftrydey9rc47m4gz4c424fnfjt2g","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/t5ftrydey9rc47m4gz4c424fnfjt2g","categories":["Mens"],"onSale":false,"priceCents":2500,"displayPrice":"from $25.00","displayOriginal":null,"variantOptions":["Size","Color"],"variants":[{"attributes":{"Size":"Small","Color":"Heather Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Medium","Color":"Heather Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Heather Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XL","Color":"Heather Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"XXL","Color":"Heather Grey"},"priceCents":2750,"salePriceCents":null},{"attributes":{"Size":"3XL","Color":"Heather Grey"},"priceCents":3000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721943098642-KNI6IX0P17C742ILY1CF/33027150_2216326775320643_927941655829413888_n.jpg?format=1200w"],"description":"Show off your sense of humor with this hilarious \"You checking out my wiener?\" t-shirt. Perfect for casual wear or as a conversation starter, this funny tee is sure to get a few laughs."},{"title":"T-shirt","slug":"6b8xfak3dyd9ezpdhrrxjhhgw49yz4","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/6b8xfak3dyd9ezpdhrrxjhhgw49yz4","categories":["Mens"],"onSale":false,"priceCents":2500,"displayPrice":"from $25.00","displayOriginal":null,"variantOptions":["Color","Size"],"variants":[{"attributes":{"Size":"small","Color":"Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"medium","Color":"Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"large","Color":"Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xl","Color":"Grey"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xxl","Color":"Grey"},"priceCents":2750,"salePriceCents":null},{"attributes":{"Size":"3xl","Color":"Grey"},"priceCents":3000,"salePriceCents":null},{"attributes":{"Size":"small","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"medium","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"large","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xl","Color":"Black"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xxl","Color":"Black"},"priceCents":2750,"salePriceCents":null},{"attributes":{"Size":"3xl","Color":"Black"},"priceCents":3000,"salePriceCents":null},{"attributes":{"Size":"small","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"medium","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"large","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xl","Color":"Navy"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xxl","Color":"Navy"},"priceCents":2750,"salePriceCents":null},{"attributes":{"Size":"3xl","Color":"Navy"},"priceCents":3000,"salePriceCents":null},{"attributes":{"Size":"medium","Color":"White"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"large","Color":"White"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xl","Color":"White"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Size":"xxl","Color":"White"},"priceCents":2750,"salePriceCents":null},{"attributes":{"Size":"3xl","Color":"White"},"priceCents":3000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721942711469-DDCI7KBMLHJJLMVI5TIP/60889094_2495162714103713_1209359393510916096_n.jpg?format=1200w"],"description":"Made with high-quality materials, this t-shirt is not only hilarious but also comfortable cotton to wear all day long. Whether you're hanging out with friends or running errands, this shirt is sure to make a statement and bring a smile to everyone's face. Get yours today and show off your unique sense of humor!"},{"title":"Medium Dog food stand","slug":"medium-dog-food-stand","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/medium-dog-food-stand","categories":["Home Decor"],"onSale":false,"priceCents":4500,"displayPrice":"$45.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":4500,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721933895435-KZ8M30U1CDAXTSSODCTA/433839192_729470759172767_4783131591494698173_n.jpg?format=1200w"],"description":"Elevate your pet's dining experience with this stylish dog food stand featuring two bowls. Made from high-quality wood, this stand not only provides a comfortable eating height for your furry friend but also adds a touch of elegance to your home decor. 16” wide, 8” deep, 6” high. These bowls can be personalized with your pet's name. Colour can also be changed."},{"title":"Hoody","slug":"hoody-1","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/hoody-1","categories":["Mens"],"onSale":false,"priceCents":5500,"displayPrice":"from $55.00","displayOriginal":null,"variantOptions":["Color","Size"],"variants":[{"attributes":{"Size":"Small","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Medium","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XL","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XXL","Color":"Grey"},"priceCents":6000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721857224200-42PS1GR0XJ7JMU2GC53R/275078152_3353211848298791_8885933661265678650_n.png?format=1200w"],"description":"Gildan cotton/polyester 50/50\n\nStay comfortable and stylish while navigating the challenges of adulting with our trendy hoody. Made for those who find adulting a bit excessive, this hoody is perfect for lounging at home or running errands in style. With a relaxed fit and soft fabric, you'll never want to take it off. Upgrade your wardrobe and embrace the adulting life with our must-have hoody."},{"title":"Champaign Bottles Custom orders Please contact us for more information and pricing.","slug":"champaign-bottles-custom-orders-please-contact-us-for-more-information-and-pricing","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/champaign-bottles-custom-orders-please-contact-us-for-more-information-and-pricing","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":0,"displayPrice":"$0.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":0,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721848328570-GWSEZJ2JJFDHRFMHK5D9/Champaign.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721850966263-2IV2H8HQFLO5UCOBL6PE/Untitled+%286+x+7.5+in%29.png?format=1200w"],"description":"Elevate your celebrations with our exquisite champaign or wine bottles, each with a special touch that adds a unique flair to your special occasions. Whether it's a wedding, anniversary, or any other milestone, our bottles are designed to make your moments even more memorable. Cheers to unforgettable memories with our special touch bottles!"},{"title":"Hoody","slug":"hoody-2","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/hoody-2","categories":["Ladies"],"onSale":false,"priceCents":5500,"displayPrice":"from $55.00","displayOriginal":null,"variantOptions":["Size","Color"],"variants":[{"attributes":{"Size":"Small","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Medium","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XL","Color":"Grey"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XXL","Color":"Grey"},"priceCents":5700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721779588188-CIP4GFO11VALJ3MEOR5W/hers.png?format=1200w"],"description":"Embrace your emotions while showcasing your sense of humor with this unique hoodie that features a playful skeleton design. Made from soft and comfortable fabric, this hoodie is perfect for everyday wear or lounging at home. Stand out from the crowd and let your personality shine with this one-of-a-kind piece."},{"title":"15oz mug","slug":"15oz-mug-4","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/15oz-mug-4","categories":["Drinkware"],"onSale":false,"priceCents":1700,"displayPrice":"$17.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721779506216-ORYO9LLB8E1JRIWYS987/blessed+nana.png?format=1200w"],"description":"This \"blessed nana mug\" is the perfect gift for any grandmother who holds a special place in your heart. With a charming design and the word \"blessed\" prominently displayed, this mug will surely bring a smile to your nana's face every time she uses it. Made from high-quality ceramic, this mug is both microwave and dishwasher safe, making it practical for everyday use. Show your nana how much you appreciate her with this thoughtful and heartwarming gift."},{"title":"15oz Mug","slug":"15oz-mug-3","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/15oz-mug-3","categories":["Drinkware"],"onSale":false,"priceCents":1700,"displayPrice":"$17.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721779260660-ZWQ6MPAABO32O12N4ND1/grandma.png?format=1200w"],"description":"This custom coffee mug features a charming design of \"grandma's truck,\" making it a perfect gift for any grandmother who loves coffee or tea. The high-quality ceramic material ensures durability and the design is printed using a sublimation process for long-lasting vibrancy. Whether for a birthday, Mother's Day, or just because, this personalized mug is sure to bring a smile to grandma's face with every sip"},{"title":"15oz mug","slug":"15oz-mug-2","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/15oz-mug-2","categories":["Drinkware"],"onSale":false,"priceCents":1700,"displayPrice":"$17.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721244815927-AMMRZU669INX7HQ6P5WH/568029bf-0a98-48f0-a171-fbc677af230a.jpg?format=1200w"],"description":"This mug is perfect for enjoying your favorite hot beverage while reminding yourself to stay positive despite encountering challenges."},{"title":"15oz mug","slug":"15oz-mug-1","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/15oz-mug-1","categories":["Drinkware"],"onSale":false,"priceCents":1700,"displayPrice":"$17.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721244772362-MLD2M9CLHASCYIACCLXS/1e089be2-f122-40cd-a43b-b0175b0f1ef8.jpg?format=1200w"],"description":"\"If I Give You a Straw\" mug, perfect for those who appreciate a touch of humor with their morning coffee. This high-quality ceramic mug features a sturdy handle and a bold, eye-catching design that is sure to make a statement. Whether you're enjoying your favorite hot beverage at home or in the office, this mug is sure to bring a smile to your face. Get yours today and add a little fun to your daily routine!"},{"title":"15oz mug","slug":"15oz-mug","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/15oz-mug","categories":["Drinkware"],"onSale":false,"priceCents":1700,"displayPrice":"$17.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721244460748-ANSA0UJ3B2UDB1L4997G/a7d83b3d-d3c0-447f-84d0-e516ee3a725a.jpg?format=1200w"],"description":"Enjoy your morning coffee with this adorable cat-themed mug! The high-quality ceramic mug features a cute cat design that is sure to bring a smile to your face. Whether you're a cat lover or just appreciate a fun and quirky mug, this is the perfect addition to your collection. Start your day off right with this charming cat mug."},{"title":"15oz Mug","slug":"s8tnqbb4c8kaaq0v9pghen7nmqnny1","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/s8tnqbb4c8kaaq0v9pghen7nmqnny1","categories":["Drinkware"],"onSale":false,"priceCents":1700,"displayPrice":"$17.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1700,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721180960371-2ZKBVF5W2G8PYCL1MRTU/1000000190.jpg?format=1200w"],"description":"Add a touch of humor to your morning routine with our funny mug that reads \"Some people need a glue stick instead of chapstick.\" This quirky mug is perfect for anyone who enjoys a good laugh while sipping their favorite beverage. Made from high-quality ceramic, this mug is both microwave and dishwasher safe, making it a practical and fun addition to your collection. Whether you're enjoying your morning coffee or afternoon tea, this mug is sure to bring a smile to your face."},{"title":"A Gift Card For You","slug":"a-gift-card-for-you","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/a-gift-card-for-you","categories":[],"onSale":false,"priceCents":2500,"displayPrice":"from $25.00","displayOriginal":null,"variantOptions":["Value"],"variants":[{"attributes":{"Value":"$25.00"},"priceCents":2500,"salePriceCents":null},{"attributes":{"Value":"$50.00"},"priceCents":5000,"salePriceCents":null},{"attributes":{"Value":"$75.00"},"priceCents":7500,"salePriceCents":null},{"attributes":{"Value":"$100.00"},"priceCents":10000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721072052519-B96GLBOWIQCXPQLI78U4/Add+a+heading.jpg?format=1200w"],"description":"Use this gift card to purchase anything from our online store"},{"title":"Bath tub tray","slug":"bath-tub-tray","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/bath-tub-tray","categories":["Home Decor"],"onSale":false,"priceCents":5500,"displayPrice":"$55.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":5500,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1650306553579-Q43DS1CO2C9IC5HEQSX2/bath+tub+tray.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1650306579751-J0RH3XSFE49OJ3E56CU5/grey+bath+tub+tray.jpg?format=1200w"],"description":"Please note: this item is local pick up or local delivery.\n\nSolid wood bath tub tray, these can be customized to fit a can or a mug. A personalized saying can also be added. You can choose the color."},{"title":"11oz Mug","slug":"11oz-mug-1","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/11oz-mug-1","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":1000,"displayPrice":"$10.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648929470774-0FZ02NM6IJFT0D5RX0MX/puple+bandana+bunny+purple.jpg?format=1200w"],"description":"Easter mug is dishwasher safe. These can be personalized on reverse side. Add on $2"},{"title":"11oz Mug","slug":"11oz-mug","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/11oz-mug","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":1000,"displayPrice":"$10.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648929126269-H3QHQAIH7ZBYSHBJMMFQ/happy+easter+glasses+candy.jpg?format=1200w"],"description":"Easter mug, dish washer safe. Can be personalized add on $2"},{"title":"11oz mug","slug":"gl279lq4nyg0qi2m2pwmegkc2kb0ah","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/gl279lq4nyg0qi2m2pwmegkc2kb0ah","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":1000,"displayPrice":"$10.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648928766011-UH0B93S9HF7RX6MZSXQO/dabbing+bunny+with+candy.jpg?format=1200w"],"description":"Dishwasher safe, can be personalized on reversed side, add on $2"},{"title":"11oz mug","slug":"7ge6u5siuge1wfm10p6dq6hcyrcrco","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/7ge6u5siuge1wfm10p6dq6hcyrcrco","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":1000,"displayPrice":"$10.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648928660335-WKA5OUKB8W0KXGELDKB7/bunny+with+bandana+yellow.jpg?format=1200w"],"description":"Cute Easter mug, bunny with a bandana. Can be personalized add on $2"},{"title":"Pencil sign","slug":"pencil-sign","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/pencil-sign","categories":["Teachers"],"onSale":false,"priceCents":1000,"displayPrice":"$10.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648924396781-MRW5ZQXKFE8SONZ1Z2TE/teachers.jpg?format=1200w"],"description":"Solid wood, painted, and personalized pencils for teachers. Sit perfectly on desk or shelf. \n\n11.25” long x 2”tall."},{"title":"Serving tray","slug":"serving-tray","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/serving-tray","categories":["Home Decor"],"onSale":false,"priceCents":5500,"displayPrice":"$55.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":5500,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648923799542-DHQRAH4X814LD22JH7B8/wooden%2Bround.jpg?format=1200w"],"description":"15” solid wood Local Pick up and Local Delivery\n\nstained, painted and sealed. Complete with handles, bumpers on bottom to prevent scratching."},{"title":"Bunny with glasses","slug":"bunny-with-glasses","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/bunny-with-glasses","categories":["Seasonal & Special Ocassions","Infant, Toddlers and Youth"],"onSale":false,"priceCents":1600,"displayPrice":"$16.00","displayOriginal":null,"variantOptions":["Size"],"variants":[{"attributes":{"Size":"2-4 Lime Green"},"priceCents":1600,"salePriceCents":null},{"attributes":{"Size":"6-8"},"priceCents":1600,"salePriceCents":null},{"attributes":{"Size":"10-12"},"priceCents":1600,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648923160785-SA8DQZ1CZKMWC791VYMF/bunny+with+glasses.jpg?format=1200w"],"description":"Cute bunny on a lime green t-shirt\n\n100% pre shrunk cotton."},{"title":"Easter Mugs","slug":"elggdxo09t54h0hhd3urv21lw5vl24","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/elggdxo09t54h0hhd3urv21lw5vl24","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":1000,"displayPrice":"$10.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":1000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648922414796-9YYNPVLHH7G8EHVZLJUS/bunny+easter+candy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648922423552-JHMK0C95CM2M63EDSQDB/dabbing+bunny+with+candy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648922433042-GCU3H4WS2ZWNQR16CTEB/bunny+with+bandana+yellow.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648922449991-TNOVFJTPGA0ZMIV4Z5XB/happy+easter+glasses+candy.jpg?format=1200w","https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648922469793-LJCB8JIN2ZL0F2YULVUB/puple+bandana+bunny+purple.jpg?format=1200w"],"description":"11oz dishwasher safe Easter mugs. These can be personalized on the reverse side for an additional $2."},{"title":"Bunny with a bandana","slug":"bunny-with-a-bandana","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/bunny-with-a-bandana","categories":["Seasonal & Special Ocassions","Infant, Toddlers and Youth"],"onSale":false,"priceCents":1600,"displayPrice":"from $16.00","displayOriginal":null,"variantOptions":["Size"],"variants":[{"attributes":{"Size":"Daisy"},"priceCents":1600,"salePriceCents":null},{"attributes":{"Size":"2-4"},"priceCents":1600,"salePriceCents":null},{"attributes":{"Size":"6-8"},"priceCents":1800,"salePriceCents":null},{"attributes":{"Size":"10-12"},"priceCents":1800,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1648763488342-ZQZIZUE1KF58WLV06BWD/277107766_3373740826245893_614984006244732516_n.jpg?format=1200w"],"description":"Bunny with bandana on a daisy yellow."},{"title":"Serving tray","slug":"e3qw5el9z2qwfvin1jir4iprapn77c","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/e3qw5el9z2qwfvin1jir4iprapn77c","categories":["Home Decor"],"onSale":false,"priceCents":5500,"displayPrice":"$55.00","displayOriginal":null,"variantOptions":[],"variants":[{"attributes":{},"priceCents":5500,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1646256060170-R2XVOT61UGG1L7C8RR64/serving+tray.jpg?format=1200w"],"description":"Local pick up and local delivery. Solid wood serving tray. Stained in espresso, painted and sealed.\n\n15inch."},{"title":"Unisex Hoody","slug":"hoody","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/hoody","categories":["Ladies"],"onSale":false,"priceCents":5500,"displayPrice":"from $55.00","displayOriginal":null,"variantOptions":["Material","Size","Color"],"variants":[{"attributes":{"Size":"Small","Color":"Navy","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Small","Color":"Black","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Medium","Color":"Navy","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Medium","Color":"Black","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Navy","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"Large","Color":"Black","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"Navy","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XLarge","Color":"Black","Material":"50/50 cotton polyester"},"priceCents":5500,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"Navy","Material":"50/50 cotton polyester"},"priceCents":5700,"salePriceCents":null},{"attributes":{"Size":"XXLarge","Color":"Black","Material":"50/50 cotton polyester"},"priceCents":5700,"salePriceCents":null},{"attributes":{"Size":"XXXLarge","Color":"Navy","Material":"50/50 cotton polyester"},"priceCents":6000,"salePriceCents":null},{"attributes":{"Size":"XXXLarge","Color":"Black","Material":"50/50 cotton polyester"},"priceCents":6000,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1646254039327-OQ9L1O760HZIGQPU9HZC/navy+blue+adulting+hoody.jpg?format=1200w"],"description":"Embrace your inner child with our 'Adultish' hoody, perfect for those who believe that being an adult is a bit overrated. Made from soft and comfortable fabric, this hoody is perfect for everyday wear or lounging at home. With a relaxed fit and a playful design, you'll never want to take it off. Upgrade your wardrobe and embrace your inner child with our must-have hoody."},{"title":"Memorial Lantern","slug":"memorial-lantern","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/memorial-lantern","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":5500,"displayPrice":"$55.00","displayOriginal":null,"variantOptions":["color"],"variants":[{"attributes":{"color":"Black, white"},"priceCents":5500,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1721073179080-R5JGJGANLOX9XECCB3SH/Lanters.jpg?format=1200w"],"description":"11” tall, black or white frosted glass memorial lanterns. 6” wide 6” length \n\nweight 2lb 6oz\n\nYour wings were ready but our hearts were not."},{"title":"Mother's Day mug","slug":"mothers-day-mug","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/mothers-day-mug","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":1000,"displayPrice":"from $10.00","displayOriginal":null,"variantOptions":["size"],"variants":[{"attributes":{"size":"11oz"},"priceCents":1000,"salePriceCents":null},{"attributes":{"size":"15oz"},"priceCents":1500,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1631487163265-9OCA0FIZMY36JGPE0NSZ/first+my+mother.png?format=1200w"],"description":"11oz mug, dishwasher safe."},{"title":"Mugs","slug":"6s081a8dkp5mr7c8jgqdn41e9ob1e6","url":"https://www.janesuniquegiftsanddesigns.ca/shop/p/6s081a8dkp5mr7c8jgqdn41e9ob1e6","categories":["Seasonal & Special Ocassions"],"onSale":false,"priceCents":1000,"displayPrice":"from $10.00","displayOriginal":null,"variantOptions":["size"],"variants":[{"attributes":{"size":"11oz"},"priceCents":1000,"salePriceCents":null},{"attributes":{"size":"15oz"},"priceCents":1500,"salePriceCents":null}],"images":["https://images.squarespace-cdn.com/content/v1/61395e9f7e183b7d77a67008/1631486417675-BP8S902R5ECA2RFDRQW6/a+mothers+greatest+masterpiece+is+her+children.png?format=1200w"],"description":"Celebrate the special bond between a mother and her children with this 11oz Mother's Day mug featuring the heartfelt message 'A Mother's Greatest Masterpiece is Her Children.' Made from high-quality ceramic, this mug is both durable and dishwasher safe, ensuring it will last for years to come. Whether you're enjoying your morning coffee or afternoon tea, this mug is sure to bring a smile to your face."}]};
+var PRODUCTS = CATALOGUE.products;
+var CATEGORIES = CATALOGUE.categoriesOrder;
+var CHAMPAIGN_SLUG = "champaign-bottles-custom-orders-please-contact-us-for-more-information-and-pricing";
+
+var TESTIMONIALS = [
+  { quote: "I absolutely love the blanket ladder I ordered from Jane's Unique Gifts & Designs. It's the perfect addition to my living room, and the craftsmanship is outstanding. Thank you for creating such a beautiful piece!", name: "Tiffany" },
+  { quote: "Jane is truly talented! She made a custom birthday gift for my daughter, and it was a hit! The attention to detail and quality of the item exceeded my expectations. I highly recommend her work to anyone looking for something special.", name: "Racheal" },
+  { quote: "I was thrilled with the mug I recieved from Jane's Unique Gifts & Designs. It was beautifully designed and the quality is fantastic. I've already recommended it to my friends and family!", name: "Mirella" },
+  { quote: "I absolutely love the shirt I got from Jane's Unique Gifts & Designs! The design is super cute, and the quality is amazing! I've gotten so many compliments on it!", name: "Amanda" },
+  { quote: "I ordered a custom tumbler for my wife's birthday, and it turned out perfect! Jane was so easy to work with and the final product was even better than I imagined. I'll definitely be ordering again!", name: "Chris" },
+  { quote: "I purchased a few items as gifts for my friends and they all loved them! Jane's attention to detail and unique designs make her shop stand out. I can't wait to see what she comes up with next!", name: "Emily" }
+];
+
+var MARKETS = [
+  { name: "Locality Brewery", lines: ["Fall Harvest Market", "12noon -5pm", "7111 252nd Street Langley. BC"] },
+  { name: "Tis The Season", lines: ["Evergreen Hall", "Chilliwack BC", "November 28th 2026"] },
+  { name: "Silver Creek 5th Annual Market", lines: ["63831 School Road", "10am - 3pm", "Hope BC", "December 5th 2026"] },
+  { name: "Christmas Gifts Expo", lines: ["Heritage Barn Chilliwack", "December 11th, 12th & 13th."] }
+];
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function money(cents){ return "$" + (cents/100).toFixed(2); }
+function bySlug(slug){ for (var i=0;i<PRODUCTS.length;i++) if (PRODUCTS[i].slug===slug) return PRODUCTS[i]; return null; }
+function effPrice(variant, product){
+  if (product.onSale && variant.salePriceCents != null) return variant.salePriceCents;
+  return variant.priceCents;
+}
+function basePrice(p){
+  if (p.variants && p.variants.length) return effPrice(p.variants[0], p);
+  return p.priceCents;
+}
+
+/* ---------- Static images ---------- */
+$("logoImg").src = CATALOGUE.logo;
+$("heroPhoto").src = CATALOGUE.aboutPhoto;
+$("storyPhoto").src = CATALOGUE.aboutPhoto;
+$("aboutPhoto").src = CATALOGUE.aboutPhoto;
+
+/* ---------- Product cards ---------- */
+function priceHTML(p){
+  if (p.slug === CHAMPAIGN_SLUG) return '<span class="price-note">Contact Jane for pricing</span>';
+  if (p.onSale) return '<span class="price">' + esc(p.displayPrice) + '<span class="was">' + esc(p.displayOriginal) + '</span></span>';
+  return '<span class="price">' + esc(p.displayPrice) + '</span>';
+}
+function cardHTML(p){
+  var cat = p.categories.length ? p.categories.join(" · ") : "";
+  return '<a class="prod-card" href="#/product/' + p.slug + '" data-nav>' +
+    '<span class="ph">' + (p.onSale ? '<span class="badge-sale">Sale</span>' : '') +
+    '<img src="' + esc(p.images[0]) + '" alt="' + esc(p.title) + '" loading="lazy" /></span>' +
+    '<span class="info">' + (cat ? '<span class="cat">' + esc(cat) + '</span>' : '') +
+    '<h3>' + esc(p.title) + '</h3>' + priceHTML(p) + '</span></a>';
+}
+
+/* ---------- Home renders ---------- */
+(function renderHome(){
+  // Featured collections: one card per category that has products (Paint Your Plaster has none)
+  var html = "";
+  CATEGORIES.forEach(function(cat){
+    if (cat === "All") return;
+    var first = null;
+    for (var i=0;i<PRODUCTS.length;i++) if (PRODUCTS[i].categories.indexOf(cat) >= 0){ first = PRODUCTS[i]; break; }
+    if (!first) return;
+    html += '<a class="coll-card" href="#/shop?cat=' + encodeURIComponent(cat) + '" data-nav>' +
+      '<span class="ph"><img src="' + esc(first.images[0]) + '" alt="' + esc(cat) + '" loading="lazy" /></span>' +
+      '<span class="lbl"><h3>' + esc(cat) + '</h3><span>Shop Now</span></span></a>';
+  });
+  $("collGrid").innerHTML = html;
+
+  // Featured products: first 8 in shop order
+  $("featuredGrid").innerHTML = PRODUCTS.slice(0,8).map(cardHTML).join("");
+
+  // Shop by occasion: all categories incl. empty Paint Your Plaster
+  $("occList").innerHTML = CATEGORIES.filter(function(c){ return c !== "All"; }).map(function(cat){
+    return '<a class="occ-row" href="#/shop?cat=' + encodeURIComponent(cat) + '" data-nav><h3>' + esc(cat) + '</h3><span class="arr">&rarr;</span></a>';
+  }).join("");
+
+  // Testimonials: the three from the Testimonials page
+  $("homeTesti").innerHTML = TESTIMONIALS.slice(0,3).map(testiHTML).join("");
+
+  // Markets teaser
+  $("homeMarkets").innerHTML = MARKETS.map(marketHTML).join("");
+})();
+
+function testiHTML(t){
+  return '<figure class="testi"><span class="mark">&ldquo;</span><blockquote>' + esc(t.quote) + '</blockquote><figcaption>— ' + esc(t.name) + '</figcaption></figure>';
+}
+function marketHTML(m){
+  return '<article class="market-card"><h3>' + esc(m.name) + '</h3>' + m.lines.map(function(l){ return '<p>' + esc(l) + '</p>'; }).join("") + '</article>';
+}
+$("allTesti").innerHTML = TESTIMONIALS.map(testiHTML).join("");
+$("allMarkets").innerHTML = MARKETS.map(marketHTML).join("");
+
+/* ---------- Shop ---------- */
+var shopState = { cat: "All", q: "", sort: "relevance" };
+(function buildFilters(){
+  $("filterBar").innerHTML = CATEGORIES.map(function(cat){
+    return '<button type="button" class="filter-btn' + (cat==="All" ? " active" : "") + '" data-cat="' + esc(cat) + '">' + esc(cat) + '</button>';
+  }).join("");
+  Array.prototype.forEach.call($("filterBar").querySelectorAll(".filter-btn"), function(btn){
+    btn.addEventListener("click", function(){
+      shopState.cat = btn.getAttribute("data-cat");
+      syncFilterUI(); renderShop();
+    });
+  });
+})();
+function syncFilterUI(){
+  Array.prototype.forEach.call($("filterBar").querySelectorAll(".filter-btn"), function(btn){
+    btn.classList.toggle("active", btn.getAttribute("data-cat") === shopState.cat);
+  });
+}
+function renderShop(){
+  var list = PRODUCTS.filter(function(p){
+    if (shopState.cat !== "All" && p.categories.indexOf(shopState.cat) < 0) return false;
+    if (shopState.q){
+      var hay = (p.title + " " + p.description + " " + p.categories.join(" ")).toLowerCase();
+      if (hay.indexOf(shopState.q.toLowerCase()) < 0) return false;
+    }
+    return true;
+  });
+  if (shopState.sort === "price-asc") list = list.slice().sort(function(a,b){ return basePrice(a)-basePrice(b); });
+  else if (shopState.sort === "price-desc") list = list.slice().sort(function(a,b){ return basePrice(b)-basePrice(a); });
+  else if (shopState.sort === "name") list = list.slice().sort(function(a,b){ return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1; });
+  $("shopGrid").innerHTML = list.map(cardHTML).join("");
+  $("shopEmpty").hidden = list.length > 0;
+  $("resultCount").textContent = list.length === 1 ? "1 product" : list.length + " products";
+}
+$("shopSearch").addEventListener("input", function(e){ shopState.q = e.target.value.trim(); renderShop(); });
+$("shopSort").addEventListener("change", function(e){ shopState.sort = e.target.value; renderShop(); });
+renderShop();
+
+/* ---------- Product detail ---------- */
+var pd = { product: null, sel: {}, qty: 1, variant: null };
+function optionValues(p, opt){
+  var vals = [];
+  p.variants.forEach(function(v){
+    var val = v.attributes[opt];
+    if (val != null && vals.indexOf(val) < 0) vals.push(val);
+  });
+  return vals;
+}
+function findVariant(p, sel){
+  var match = null;
+  p.variants.forEach(function(v){
+    var ok = true;
+    p.variantOptions.forEach(function(opt){ if (v.attributes[opt] !== sel[opt]) ok = false; });
+    if (ok) match = v;
+  });
+  return match;
+}
+function openProduct(slug){
+  var p = bySlug(slug);
+  if (!p){ location.hash = "#/shop"; return; }
+  pd.product = p; pd.qty = 1; pd.sel = {};
+  $("qtyOut").textContent = "1";
+  $("addedMsg").hidden = true;
+  $("pdCrumb").textContent = p.title;
+  $("pdTitle").textContent = p.title;
+  $("pdCats").textContent = p.categories.join("  ·  ");
+  // Gallery
+  $("pdMain").src = p.images[0];
+  $("pdMain").alt = p.title;
+  $("pdThumbs").innerHTML = p.images.map(function(src, i){
+    return '<button type="button" class="' + (i===0 ? "active" : "") + '" data-i="' + i + '" aria-label="View image ' + (i+1) + '"><img src="' + esc(src) + '" alt="" loading="lazy" /></button>';
+  }).join("");
+  Array.prototype.forEach.call($("pdThumbs").querySelectorAll("button"), function(btn){
+    btn.addEventListener("click", function(){
+      var i = parseInt(btn.getAttribute("data-i"), 10);
+      $("pdMain").src = p.images[i];
+      Array.prototype.forEach.call($("pdThumbs").querySelectorAll("button"), function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+    });
+  });
+  // Options
+  var optWrap = $("pdOptions");
+  optWrap.innerHTML = "";
+  if (p.variants.length && p.variantOptions.length){
+    pd.sel = {};
+    var first = p.variants[0];
+    p.variantOptions.forEach(function(opt){ pd.sel[opt] = first.attributes[opt]; });
+    p.variantOptions.forEach(function(opt){
+      var group = document.createElement("div");
+      group.className = "opt-group";
+      var vals = optionValues(p, opt);
+      group.innerHTML = '<label for="opt-' + esc(opt) + '">' + esc(opt) + '</label>';
+      var sel = document.createElement("select");
+      sel.id = "opt-" + opt;
+      sel.setAttribute("data-opt", opt);
+      sel.innerHTML = vals.map(function(v){
+        return '<option value="' + esc(v) + '"' + (v === pd.sel[opt] ? " selected" : "") + '>' + esc(v) + '</option>';
+      }).join("");
+      sel.addEventListener("change", function(){
+        pd.sel[opt] = sel.value;
+        updatePdPrice();
+      });
+      group.appendChild(sel);
+      optWrap.appendChild(group);
+    });
+  }
+  // Buy row vs contact-for-pricing
+  var isChampaign = p.slug === CHAMPAIGN_SLUG;
+  $("pdBuyRow").style.display = isChampaign ? "none" : "";
+  $("pdContactBtn").hidden = !isChampaign;
+  updatePdPrice();
+  // Description: paragraphs preserved verbatim
+  $("pdDesc").innerHTML = p.description.split(/\n\s*\n/).map(function(par){
+    return "<p>" + esc(par.replace(/\n/g, " ")) + "</p>";
+  }).join("");
+  // Related: same first category, catalogue order
+  var rel = [];
+  if (p.categories.length){
+    PRODUCTS.forEach(function(x){ if (x.slug !== p.slug && x.categories.indexOf(p.categories[0]) >= 0 && rel.length < 4) rel.push(x); });
+  }
+  if (!rel.length) PRODUCTS.forEach(function(x){ if (x.slug !== p.slug && rel.length < 4) rel.push(x); });
+  $("relatedGrid").innerHTML = rel.map(cardHTML).join("");
+}
+function currentVariant(){
+  var p = pd.product;
+  if (!p) return null;
+  if (!p.variants.length) return { attributes: {}, priceCents: p.priceCents, salePriceCents: p.onSale ? p.priceCents : null };
+  return findVariant(p, pd.sel) || p.variants[0];
+}
+function updatePdPrice(){
+  var p = pd.product; if (!p) return;
+  pd.variant = currentVariant();
+  var el = $("pdPrice");
+  if (p.slug === CHAMPAIGN_SLUG){ el.innerHTML = '<span class="price-note" style="font-size:1.3rem">Contact Jane for pricing</span>'; return; }
+  if (!p.variants.length || !p.variantOptions.length){
+    el.innerHTML = esc(p.displayPrice) + (p.onSale ? '<span class="was">' + esc(p.displayOriginal) + '</span>' : '');
+    return;
+  }
+  el.textContent = money(effPrice(pd.variant, p));
+}
+$("qtyMinus").addEventListener("click", function(){ if (pd.qty > 1){ pd.qty--; $("qtyOut").textContent = pd.qty; } });
+$("qtyPlus").addEventListener("click", function(){ if (pd.qty < 99){ pd.qty++; $("qtyOut").textContent = pd.qty; } });
+
+/* ---------- Cart (in-memory demo) ---------- */
+var cart = []; // {slug, key, attrsLabel, unitCents, qty}
+function cartKey(slug, attrs){ return slug + "|" + JSON.stringify(attrs); }
+function addToCart(){
+  var p = pd.product; if (!p) return;
+  var v = pd.variant || currentVariant();
+  var key = cartKey(p.slug, v.attributes);
+  var found = null;
+  cart.forEach(function(it){ if (it.key === key) found = it; });
+  if (found) found.qty += pd.qty;
+  else cart.push({ slug: p.slug, key: key, attrs: v.attributes, unitCents: effPrice(v, p), qty: pd.qty });
+  renderCart();
+  var label = Object.keys(v.attributes).map(function(k){ return v.attributes[k]; }).join(" / ");
+  $("addedMsg").hidden = false;
+  $("addedMsg").textContent = "Added to cart: " + p.title + (label ? " (" + label + ")" : "") + " × " + pd.qty + ". Use the cart icon at the top of the page to review your cart.";
+}
+$("addToCartBtn").addEventListener("click", addToCart);
+function cartCount(){ return cart.reduce(function(s,it){ return s + it.qty; }, 0); }
+function cartTotal(){ return cart.reduce(function(s,it){ return s + it.qty * it.unitCents; }, 0); }
+function renderCart(){
+  $("cartCount").textContent = cartCount();
+  var body = $("cartBody");
+  if (!cart.length){
+    body.innerHTML = '<p class="cart-empty">Your cart is empty.</p>';
+    $("cartFoot").style.display = "none";
+    return;
+  }
+  $("cartFoot").style.display = "";
+  $("checkoutMsg").classList.remove("show");
+  body.innerHTML = cart.map(function(it, idx){
+    var p = bySlug(it.slug);
+    var label = Object.keys(it.attrs).map(function(k){ return k + ": " + it.attrs[k]; }).join(" · ");
+    return '<div class="cart-item">' +
+      '<span class="thumb"><img src="' + esc(p.images[0]) + '" alt="" /></span>' +
+      '<div><h4>' + esc(p.title) + '</h4>' +
+      (label ? '<p class="variant">' + esc(label) + '</p>' : '') +
+      '<div class="row"><span class="mini-qty">' +
+      '<button type="button" data-act="dec" data-i="' + idx + '" aria-label="Decrease quantity">−</button>' +
+      '<output>' + it.qty + '</output>' +
+      '<button type="button" data-act="inc" data-i="' + idx + '" aria-label="Increase quantity">+</button></span>' +
+      '<span class="price">' + money(it.unitCents * it.qty) + '</span></div>' +
+      '<button type="button" class="remove-btn" data-act="rm" data-i="' + idx + '">Remove</button>' +
+      '</div></div>';
+  }).join("");
+  $("cartTotal").textContent = money(cartTotal()) + " CAD";
+  Array.prototype.forEach.call(body.querySelectorAll("button[data-act]"), function(btn){
+    btn.addEventListener("click", function(){
+      var i = parseInt(btn.getAttribute("data-i"), 10);
+      var act = btn.getAttribute("data-act");
+      if (act === "inc") cart[i].qty++;
+      else if (act === "dec"){ cart[i].qty--; if (cart[i].qty < 1) cart.splice(i,1); }
+      else if (act === "rm") cart.splice(i,1);
+      renderCart();
+    });
+  });
+}
+renderCart();
+var drawerTimer = null;
+function openCart(){
+  var d = $("cartDrawer");
+  if (drawerTimer){ clearTimeout(drawerTimer); drawerTimer = null; }
+  d.classList.remove("gone");
+  void d.offsetWidth; /* reflow so the slide-in transition runs */
+  d.classList.add("open"); d.setAttribute("aria-hidden","false"); $("overlay").classList.add("show");
+}
+function closeCart(){
+  var d = $("cartDrawer");
+  d.classList.remove("open"); d.setAttribute("aria-hidden","true"); $("overlay").classList.remove("show");
+  if (drawerTimer) clearTimeout(drawerTimer);
+  drawerTimer = setTimeout(function(){ if (!d.classList.contains("open")) d.classList.add("gone"); }, 420);
+}
+$("cartBtn").addEventListener("click", openCart);
+$("cartClose").addEventListener("click", closeCart);
+$("overlay").addEventListener("click", closeCart);
+document.addEventListener("keydown", function(e){ if (e.key === "Escape"){ closeCart(); closeMenu(); } });
+$("checkoutBtn").addEventListener("click", function(){ $("checkoutMsg").classList.add("show"); });
+
+/* ---------- Mobile menu ---------- */
+var menuOpen = false;
+function closeMenu(){ menuOpen = false; $("mobileMenu").classList.remove("open"); $("burgerBtn").setAttribute("aria-expanded","false"); }
+$("burgerBtn").addEventListener("click", function(){
+  menuOpen = !menuOpen;
+  $("mobileMenu").classList.toggle("open", menuOpen);
+  $("burgerBtn").setAttribute("aria-expanded", menuOpen ? "true" : "false");
+});
+
+/* ---------- Contact form (demo) ---------- */
+$("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var ok = true;
+  function check(name, valid){
+    var f = document.querySelector('.field[data-field="' + name + '"]');
+    f.classList.toggle("invalid", !valid);
+    if (!valid) ok = false;
+  }
+  check("firstName", $("cfFirst").value.trim().length > 0);
+  check("lastName", $("cfLast").value.trim().length > 0);
+  check("email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("cfEmail").value.trim()));
+  check("message", $("cfMsg").value.trim().length > 0);
+  if (!ok) return;
+  $("contactForm").hidden = true;
+  $("contactOk").hidden = false;
+  $("contactOk").scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+/* ---------- Reveal on scroll (text blocks only) ---------- */
+var revealIO = null;
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  revealIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("in"); revealIO.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+}
+function armReveals(){
+  Array.prototype.forEach.call(document.querySelectorAll(".reveal:not(.in)"), function(el){
+    if (revealIO) revealIO.observe(el); else el.classList.add("in");
+  });
+}
+
+/* ---------- Router ---------- */
+var VIEWS = ["home","shop","product","about","testimonials","markets","contact"];
+function parseHash(){
+  var h = location.hash.replace(/^#\/?/, "");
+  var parts = h.split("?");
+  var path = parts[0];
+  var params = {};
+  if (parts[1]) parts[1].split("&").forEach(function(kv){
+    var p = kv.split("="); params[decodeURIComponent(p[0])] = decodeURIComponent(p[1] || "");
+  });
+  return { path: path, params: params };
+}
+function route(){
+  var r = parseHash();
+  var view = "home";
+  closeMenu(); closeCart();
+  if (r.path === "" ) view = "home";
+  else if (r.path === "shop"){
+    view = "shop";
+    if (r.params.cat && CATEGORIES.indexOf(r.params.cat) >= 0 && r.params.cat !== shopState.cat){
+      shopState.cat = r.params.cat; syncFilterUI(); renderShop();
+    }
+    if (r.params.q != null && r.params.q !== shopState.q){
+      shopState.q = r.params.q; $("shopSearch").value = r.params.q; renderShop();
+    }
+  }
+  else if (r.path.indexOf("product/") === 0){ view = "product"; openProduct(r.path.slice(8)); }
+  else if (VIEWS.indexOf(r.path) >= 0) view = r.path;
+  VIEWS.forEach(function(v){ $("view-" + v).classList.toggle("active", v === view); });
+  Array.prototype.forEach.call(document.querySelectorAll(".main-nav a"), function(a){
+    a.classList.toggle("active", a.getAttribute("data-route") === view || (view === "product" && a.getAttribute("data-route") === "shop"));
+  });
+  window.scrollTo(0, 0);
+  armReveals();
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
